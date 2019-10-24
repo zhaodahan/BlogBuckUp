@@ -1,0 +1,84 @@
+---
+title: git 问题解决记录
+date: 2019-10-24 20:57:53
+tags: 
+  - issue
+  - git
+---
+
+
+
+#                                     git 问题解决记录
+
+# unable to access 'XXX':Empty reply from server
+
+```
+$ git pull origin master
+fatal: unable to access 'https://github.com/zhaodahan/zhao_Note.git/': Empty reply from server
+```
+
+解决：**重置git配置的http或https代理的：**
+
+```
+git config --global --unset http.proxy
+```
+
+然后就成功pull
+
+<!--more-->
+
+# 本地库已经删除了，但是依旧提交到了远程库
+
+远程库与本地库不一致，使用git pull 无法将多余的文件拉取下来。
+
+解决思路： 用远程库覆盖本地版本库。 然后修改后重新提交。
+
+
+
+# git clone 和pull  速度太慢解决方案
+
+windows上进入c:\windows\system32\drivers\etc，找到hosts
+
+```
+151.101.72.249 http://global-ssl.fastly.Net
+192.30.253.112 http://github.com
+```
+
+cmd : 刷新DNS来生效
+
+```
+ipconfig /flushdns
+```
+
+修改使用ssr 来连接
+
+```
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+```
+
+使用完之后取消代理以便不会影响提交
+
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+
+
+#  使用git提交代码到github,每次都要输入用户名和密码的解决方法
+
+```
+找到项目的.git目录下的config文件： 
+修改url路径
+将其改为如下格式： 
+https://username:password@github.com/username/project.git 
+在这里，username就是你的用户名，比如我的用户名是CmderQ，那么改成之后的结果是： 
+url= https://CmderQ:#####@github.com/CmderQ/hello.git 
+这里的”#####”代表的就是我这个账户的密码。改完之后，保存
+
+例如: 我的修改
+#	url = https://github.com/zhaodahan/zhao_Note.git
+    url = https://zhaodahan:zhao7494@github.com/zhaodahan/zhao_Note.git
+```
+
