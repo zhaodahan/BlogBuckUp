@@ -82,3 +82,13 @@ url= https://CmderQ:#####@github.com/CmderQ/hello.git
     url = https://zhaodahan:zhao7494@github.com/zhaodahan/zhao_Note.git
 ```
 
+
+
+# Github下载仓库中单个文件的方法
+
+```
+使用下述规则下载
+https://raw.githubusercontent.com/【user】/【repository】/【branch】/【filename】
+如：https://raw.githubusercontent.com/afad-dataset/tarball/master/AFAD-Full.tar.xzae
+```
+
