@@ -111,7 +111,9 @@ exclude_generator:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git   
-  repository: git@github.com:zhaodahan/zhaodahan.github.io.git  
+  repository: 
+        github: git@github.com:zhaodahan/zhaodahan.github.io.git  
+        coding: git@e.coding.net:zhaodahan/zhaodahan.coding.me.git
   branch: master
 
 sitemap:
