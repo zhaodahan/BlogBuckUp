@@ -2,11 +2,13 @@
 title: Nginx笔记
 date: 2019-11-05 16:17:53
 tags: 
-   - note
-   - Nginx
+  - note
+  - Nginx
 ---
 
-# Nginx学习视频
+
+
+#Nginx学习视频
 
 ## 什么是Nginx？
 
@@ -373,7 +375,3 @@ worker 数和服务器的 cpu 数相等是最为适宜的
 
 ![JAVA_NGINX18.png](https://github.com/zhaodahan/zhao_Note/blob/master/wiki_img/JAVA_NGINX18.png?raw=true)
 
-第二个：nginx 有一个 个 master ，有四个 woker ，每个 woker 支持最大的连接数 1024 ，支持的
-最大并发数是多少？
- 普通的静态访问最大并发数是： `worker_connections * worker_processes /2` ，
- 而如果是 HTTP 作 为反向代理来说，最大并发数量应该是 `worker_connections *worker_processes/4` 

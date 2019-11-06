@@ -6,9 +6,7 @@
     - mq
 ---
 
-
-
-消息中间件之ActiveMQ
+# 消息中间件之ActiveMQ
 
 消息中间件已经成为应用系统内部通信的核心手段。它具有解耦、异步、削峰、签收、事务、流量控制、最终一致性等一系列高性能架构所需功能。
 
@@ -1696,6 +1694,3 @@ topic适用于可插拔的分发策略
 所有实现了`org.apache.activemq.broker.region.policy.DispatchPolicy`的都可以。
 
 默认实现是`org.apache.activemq.broker.region.policy.SimpleDispatchPolicy`，它将消息传递给所有的订阅者。一个更高级的实现示例是`org.apache.activemq.broker.region.policy.PriorityNetworkDispatchPolicy`，它只会分发给拥有最高优先级的网络消费者。这在循环网络拓扑结构中非常有用，因为在这种拓扑结构中，到消费者的路由不止一条。
-
-
-
