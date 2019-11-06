@@ -6,8 +6,6 @@ tags:
   - git
 ---
 
-
-
 #                                     git 问题解决记录
 
 # unable to access 'XXX':Empty reply from server
@@ -25,7 +23,7 @@ git config --global --unset http.proxy
 
 然后就成功pull
 
-<!--more-->
+
 
 # 本地库已经删除了，但是依旧提交到了远程库
 
@@ -66,6 +64,15 @@ git config --global --unset https.proxy
 
 
 
+# git pull 卡死情况
+
+```
+先执行 git gc
+
+```
+
+
+
 #  使用git提交代码到github,每次都要输入用户名和密码的解决方法
 
 ```
@@ -81,8 +88,6 @@ url= https://CmderQ:#####@github.com/CmderQ/hello.git
 #	url = https://github.com/zhaodahan/zhao_Note.git
     url = https://zhaodahan:zhao7494@github.com/zhaodahan/zhao_Note.git
 ```
-
-
 
 # Github下载仓库中单个文件的方法
 
